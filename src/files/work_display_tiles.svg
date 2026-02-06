@@ -3,13 +3,14 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                       Helvetica, Arial, sans-serif;
           width: 100%;
           height: 120px;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #0d1117; /* GitHub Dark Mode Background */
+          background-color: #0d1117;
           border-radius: 10px;
           border: 1px solid #30363d;
           overflow: hidden;
@@ -22,23 +23,21 @@
           height: 90px;
           background: #161b22;
           border-radius: 8px;
-          border-left: 5px solid #238636; /* Green accent */
+          border-left: 5px solid #238636;
           box-shadow: 0 3px 6px rgba(0,0,0,0.2);
           position: absolute;
-          animation: flipCycle 10s infinite ease-in-out;
           opacity: 0;
-          transform-origin: center;
+          animation: cycle 25s infinite ease-in-out;
         }
 
-        /* Layout: Left Headline, Right Summary */
         .left-col {
           width: 30%;
           display: flex;
           align-items: center;
           padding-left: 20px;
-          font-weight: bold;
+          font-weight: 600;
           font-size: 18px;
-          color: #58a6ff; /* Blue text */
+          color: #58a6ff;
           border-right: 1px solid #30363d;
         }
 
@@ -48,50 +47,50 @@
           align-items: center;
           padding: 0 20px;
           font-size: 14px;
-          color: #c9d1d9; /* Light grey text */
+          color: #c9d1d9;
         }
 
-        /* Animation Keyframes */
-        /* 0% - 45%: Show Card 1 */
-        /* 50% - 95%: Show Card 2 */
-        @keyframes flipCycle {
-          0%, 45% { opacity: 1; transform: rotateX(0deg) translateY(0); z-index: 1; }
-          50%, 100% { opacity: 0; transform: rotateX(-90deg) translateY(-20px); z-index: 0; }
+        @keyframes cycle {
+          0%   { opacity: 0; transform: translateY(20px); }
+          5%   { opacity: 1; transform: translateY(0); }
+          20%  { opacity: 1; transform: translateY(0); }
+          25%  { opacity: 0; transform: translateY(-20px); }
+          100% { opacity: 0; }
         }
 
-        /* Delay the second card so it appears when the first one leaves */
-        .card-2 {
-          animation-delay: -5s; /* Starts halfway through the cycle */
-          border-left: 5px solid #a371f7; /* Purple accent for variety */
-        }
-
+        /* Staggered timing */
+        .card-0 { animation-delay: 0s; }
+        .card-1 { animation-delay: 5s; }
+        .card-2 { animation-delay: 10s; border-left-color: #a371f7; }
+        .card-3 { animation-delay: 15s; border-left-color: #f0883e; }
+        .card-4 { animation-delay: 20s; border-left-color: #db6d28; }
       </style>
 
       <div class="container">
 
         <div class="card card-0">
-          <div class="left-col">Implementing Value at Risk (VaR) in C++</div>
+          <div class="left-col">VaR in C++</div>
           <div class="right-col">
-             Why VaR? And three distinct implementations: Historical, Parametric, and Monte Carlo.
-            </div>
+            Why Value at Risk matters, with Historical, Parametric, and Monte Carlo implementations from first principles.
+          </div>
         </div>
-        
+
         <div class="card card-1">
           <div class="left-col">Gaussian Elimination & LU Factorization</div>
           <div class="right-col">
-            Deriving the Doolittle algorithm to solve Ax=b and calculating determinants for detecting arbitrage in covariance matrices.
+            Deriving the Doolittle algorithm to solve Ax=b and compute determinants for covariance and arbitrage checks.
           </div>
         </div>
 
         <div class="card card-2">
-          <div class="left-col">Cholesky Factorization for Monte Carlo</div>
+          <div class="left-col">Cholesky Factorization</div>
           <div class="right-col">
-            Exploiting positive-definiteness (A=RtrR) to generate correlated asset paths twice as fast as standard Gaussian elimination.
+            Exploiting positive-definite matrices to generate correlated Monte Carlo paths twice as fast as std Gaussian elimination.
           </div>
         </div>
 
         <div class="card card-3">
-          <div class="left-col">Thomas Algorithm for Finite Differences</div>
+          <div class="left-col">Thomas Algorithm</div>
           <div class="right-col">
             Solving the discretized Heat Equation in O(n) time to price options using Implicit and Crank-Nicolson finite difference schemes.
           </div>
@@ -100,7 +99,8 @@
         <div class="card card-4">
           <div class="left-col">Cache-Blocked Matrix Multiplication</div>
           <div class="right-col">
-            Reducing CPU cache misses via tiling to accelerate large-scale mean-variance optimization and covariance matrix calculations.
+            Reducing cache misses via tiling to accelerate large-scale covariance and portfolio optimization workloads.
+          </div>
         </div>
 
       </div>
