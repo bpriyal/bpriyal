@@ -1,4 +1,4 @@
-![Header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=200&section=header&text=Quant&fontSize=20)
+![Header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=30&section=header&text=Quant&fontSize=20)
 
 ![Header](https://capsule-render.vercel.app/api?type=slice&color=gradient&height=200&section=header&text=Software%20Engineer&fontSize=70)
 
