@@ -1,3 +1,4 @@
+![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=50&section=header&text=Dev%20Math%Model&fontSize=30)
 ![Header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=30&section=header&text=Quant&fontSize=20)
 
 ![Header](https://capsule-render.vercel.app/api?type=slice&color=gradient&height=200&section=header&text=Software%20Engineer&fontSize=70)
@@ -44,4 +45,4 @@ Here are some ideas to get you started:
 - [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=bpriyal&theme=react-dark)](https://github.com/Ashutosh00710/github-readme-activity-graph)
 - ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=bpriyal.bpriyal)
 - ![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
-- ![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Hey%20I'm%20Priyal&fontSize=90)
+
