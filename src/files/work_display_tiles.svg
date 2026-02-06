@@ -1,4 +1,10 @@
-<svg fill="none" viewBox="0 0 800 120" width="800" height="120" xmlns="http://www.w3.org/2000/svg">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="800"
+  height="120"
+  viewBox="0 0 800 120"
+  fill="none">
+
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -58,7 +64,6 @@
           100% { opacity: 0; }
         }
 
-        /* Staggered timing */
         .card-0 { animation-delay: 0s; }
         .card-1 { animation-delay: 5s; }
         .card-2 { animation-delay: 10s; border-left-color: #a371f7; }
@@ -76,7 +81,7 @@
         </div>
 
         <div class="card card-1">
-          <div class="left-col">Gaussian Elimination & LU Factorization</div>
+          <div class="left-col">Gaussian Elimination &amp; LU Factorization</div>
           <div class="right-col">
             Deriving the Doolittle algorithm to solve Ax=b and compute determinants for covariance and arbitrage checks.
           </div>
@@ -85,19 +90,19 @@
         <div class="card card-2">
           <div class="left-col">Cholesky Factorization</div>
           <div class="right-col">
-            Exploiting positive-definite matrices to generate correlated Monte Carlo paths twice as fast as std Gaussian elimination.
+            Exploiting positive-definite matrices to generate correlated Monte Carlo paths faster than standard Gaussian elimination.
           </div>
         </div>
 
         <div class="card card-3">
           <div class="left-col">Thomas Algorithm</div>
           <div class="right-col">
-            Solving the discretized Heat Equation in O(n) time to price options using Implicit and Crank-Nicolson finite difference schemes.
+            Solving the discretized Heat Equation in O(n) time using Implicit and Crank-Nicolson finite difference schemes.
           </div>
         </div>
 
         <div class="card card-4">
-          <div class="left-col">Cache-Blocked Matrix Multiplication</div>
+          <div class="left-col">Cache-Blocked MatMul</div>
           <div class="right-col">
             Reducing cache misses via tiling to accelerate large-scale covariance and portfolio optimization workloads.
           </div>
