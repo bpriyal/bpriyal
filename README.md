@@ -1,3 +1,13 @@
+![Header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=200&section=header&text=Priyal%20Bhagwanani&fontSize=70)
+
+![Header](https://capsule-render.vercel.app/api?type=slice&color=gradient&height=200&section=header&text=Software%20Engineer&fontSize=70)
+
+![Header](https://capsule-render.vercel.app/api?type=rect&color=000000&height=150&section=header&text=Coding%20the%20Future&fontSize=50&fontAlignY=50)
+
+![Header](https://capsule-render.vercel.app/api?type=transparent&fontColor=70a1ff&text=Building%20Systems&fontSize=60)
+
+
+
 ## Hey, I'm Priyal 👋
 
 <!--
