@@ -1,3 +1,7 @@
+<div align="center">
+<img src="src/files/work_display_tiles.svg" width="100%" alt="My Published Articles">
+</div>
+
 ![Description](giphy.gif)
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=50&section=header&text=Dev%20Math%Model&fontSize=30)
