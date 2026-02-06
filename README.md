@@ -6,7 +6,15 @@
 
 ![Header](https://capsule-render.vercel.app/api?type=transparent&fontColor=70a1ff&text=Building%20Systems&fontSize=60)
 
+![Header](https://capsule-render.vercel.app/api?type=slice&color=0D1117&height=200&section=header&text=Quantitative%20Finance%20%26%20Math&fontSize=60&fontColor=70a1ff)
 
+![Header](https://capsule-render.vercel.app/api?type=soft&color=A6192E,54585A&height=180&section=header&text=MSCF%20%40%20CMU&fontSize=70)
+
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
+[![Paper](https://img.shields.io/badge/Journal%20of%20Number%20Theory-Published-blue)](YOUR_PAPER_URL)
 
 ## Hey, I'm Priyal 👋
 
