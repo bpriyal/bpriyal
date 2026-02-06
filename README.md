@@ -1,4 +1,4 @@
-![Description](your-animation.gif)
+![Description](giphy.gif)
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=50&section=header&text=Dev%20Math%Model&fontSize=30)
 ![Header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=30&section=header&text=Quant&fontSize=20)
