@@ -1,1 +1,114 @@
-This is an image file
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="800"
+  height="120"
+  viewBox="0 0 800 120"
+  fill="none">
+
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                       Helvetica, Arial, sans-serif;
+          width: 100%;
+          height: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #0d1117;
+          border-radius: 10px;
+          border: 1px solid #30363d;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .card {
+          display: flex;
+          width: 95%;
+          height: 90px;
+          background: #161b22;
+          border-radius: 8px;
+          border-left: 5px solid #238636;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+          position: absolute;
+          opacity: 0;
+          animation: cycle 25s infinite ease-in-out;
+        }
+
+        .left-col {
+          width: 30%;
+          display: flex;
+          align-items: center;
+          padding-left: 20px;
+          font-weight: 600;
+          font-size: 18px;
+          color: #58a6ff;
+          border-right: 1px solid #30363d;
+        }
+
+        .right-col {
+          width: 70%;
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+          font-size: 14px;
+          color: #c9d1d9;
+        }
+
+        @keyframes cycle {
+          0%   { opacity: 0; transform: translateY(20px); }
+          5%   { opacity: 1; transform: translateY(0); }
+          20%  { opacity: 1; transform: translateY(0); }
+          25%  { opacity: 0; transform: translateY(-20px); }
+          100% { opacity: 0; }
+        }
+
+        .card-0 { animation-delay: 0s; }
+        .card-1 { animation-delay: 5s; }
+        .card-2 { animation-delay: 10s; border-left-color: #a371f7; }
+        .card-3 { animation-delay: 15s; border-left-color: #f0883e; }
+        .card-4 { animation-delay: 20s; border-left-color: #db6d28; }
+      </style>
+
+      <div class="container">
+
+        <div class="card card-0">
+          <div class="left-col">VaR in C++</div>
+          <div class="right-col">
+            Why Value at Risk matters, with Historical, Parametric, and Monte Carlo implementations from first principles.
+          </div>
+        </div>
+
+        <div class="card card-1">
+          <div class="left-col">Gaussian Elimination &amp; LU Factorization</div>
+          <div class="right-col">
+            Deriving the Doolittle algorithm to solve Ax=b and compute determinants for covariance and arbitrage checks.
+          </div>
+        </div>
+
+        <div class="card card-2">
+          <div class="left-col">Cholesky Factorization</div>
+          <div class="right-col">
+            Exploiting positive-definite matrices to generate correlated Monte Carlo paths faster than standard Gaussian elimination.
+          </div>
+        </div>
+
+        <div class="card card-3">
+          <div class="left-col">Thomas Algorithm</div>
+          <div class="right-col">
+            Solving the discretized Heat Equation in O(n) time using Implicit and Crank-Nicolson finite difference schemes.
+          </div>
+        </div>
+
+        <div class="card card-4">
+          <div class="left-col">Cache-Blocked MatMul</div>
+          <div class="right-col">
+            Reducing cache misses via tiling to accelerate large-scale covariance and portfolio optimization workloads.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </foreignObject>
+</svg>
