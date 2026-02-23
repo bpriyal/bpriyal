@@ -5,99 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Repository | Priyal</title>
     <style>
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #111;
+            --text: #e0e0e0;
+            --accent: #555;
+            --border: #333;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f8fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            background-color: var(--bg);
             margin: 0;
-            color: #1f2328;
+            color: var(--text);
+            line-height: 1.6;
         }
         header {
-            padding: 50px 20px;
-            text-align: center;
-            background: #fff;
-            border-bottom: 1px solid #d0d7de;
+            padding: 80px 20px 40px;
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+        header p {
+            color: #888;
+            font-style: italic;
+            margin-top: 10px;
         }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 20px;
             width: 90%;
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 0 auto 60px;
         }
         .tile {
-            background: white;
-            border: 1px solid #d0d7de;
-            border-radius: 12px;
-            padding: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 40px;
             text-decoration: none;
             color: inherit;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 180px;
+            transition: border-color 0.3s ease;
         }
         .tile:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(140, 149, 159, 0.2);
-            border-color: #0969da;
+            border-color: #fff;
         }
         .tile h2 {
-            margin: 0 0 15px 0;
-            font-size: 1.6rem;
-            color: #0969da;
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .tile p {
             margin: 0;
-            color: #656d76;
-            line-height: 1.5;
+            color: #888;
+            font-size: 0.9rem;
         }
-        /* Section Specific Colors */
-        .tile.calculus { border-left: 6px solid #0969da; }
-        .tile.probability { border-left: 6px solid #1a7f37; }
-        .tile.finance { border-left: 6px solid #cf222e; }
-        .tile.semiotics { border-left: 6px solid #bf3989; background: #fffdfc; }
-        .tile.systems { border-left: 6px solid #8250df; }
+        /* Footer Sections (Non-Tiles) */
+        .extra-sections {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+            display: flex;
+            gap: 60px;
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+        }
+        .sub-link-group h3 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .sub-link-group a {
+            display: block;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .sub-link-group a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Quant & Semiotics Blog</h1>
-    <p>A repository of mathematical proofs, finance solvers, and linguistic studies.</p>
+    <p>Mathematical proofs, finance solvers, and linguistic studies.</p>
 </header>
 
 <div class="grid-container">
-    <a href="index-calculus.html" class="tile calculus">
+    <a href="index-calculus.html" class="tile">
         <h2>Calculus</h2>
-        <p>Delta-Gamma approximations, Taylor Series, and Finite Difference methods for PDEs.</p>
+        <p>Delta-Gamma, Taylor Series, Finite Difference.</p>
     </a>
-
-    <a href="index_probability_articles.html" class="tile probability">
+    <a href="index_probability_articles.html" class="tile">
         <h2>Probability</h2>
-        <p>Stochastic puzzles, Amoeba populations, and the Monty Hall problem.</p>
+        <p>Stochastic puzzles and Amoeba populations.</p>
     </a>
-
-    <a href="implied_vol_solver.html" class="tile finance">
+    <a href="implied_vol_solver.html" class="tile">
         <h2>Finance</h2>
-        <p>Black-Scholes solvers, Implied Volatility calculation, and Bond Bootstrapping.</p>
+        <p>Black-Scholes and Implied Volatility.</p>
     </a>
-
-    <a href="index-system-design.html" class="tile systems">
+    <a href="index-system-design.html" class="tile">
         <h2>System Design</h2>
-        <p>Architectural patterns, Distributed Systems, and Microservices design.</p>
+        <p>Architectural patterns and Microservices.</p>
     </a>
+</div>
 
-    <a href="articles/index.html" class="tile semiotics">
-        <h2>Semiotics</h2>
-        <p>The study of sign systems, symbolic meaning, and structural linguistics.</p>
-    </a>
-
-    <a href="game-theory/info.txt" class="tile">
-        <h2>Game Theory</h2>
-        <p>Lead-Follow decision making models and non-cooperative game simulations.</p>
-    </a>
+<div class="extra-sections">
+    <div class="sub-link-group">
+        <h3>Additional Projects</h3>
+        <a href="https://bpriyal.github.io/generalised-polyhedron-visualisation-framework/">Polyhedron Framework</a>
+        <a href="game-theory/info.txt">Game Theory Models</a>
+        <a href="articles/index.html">Semiotics Studies</a>
+    </div>
+    <div class="sub-link-group">
+        <h3>Music</h3>
+        <a href="#">Composition Archive</a>
+        <a href="#">Theory & Analysis</a>
+    </div>
 </div>
 
 </body>
