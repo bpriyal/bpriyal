@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Heat Equation in Finance</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<article>
+  <h1>The Heat Equation in Finance</h1>
+  <p class="subtitle">#4 Where Grids replace Formulas — Modeling Option Pricing via PDE</p>
+
+  <section>
+    <h2>Source & Code Reference</h2>
+    <p>Primer Ch. 6 (Finite Differences)<br>
+    C++ Implementation: <a href="../../assets/code/bs_pde_grid_solver.cpp">bs_pde_grid_solver.cpp</a></p>
+
+    <h2>Model the Problem</h2>
+    <p>
+      Model option price \(V(S,t)\) using the PDE:
+      \[
+      \frac{\partial V}{\partial t} + r S \frac{\partial V}{\partial S} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} - r V = 0
+      \]
+      Discretize using time steps \(\Delta t\) and stock steps \(\Delta S\).
+    </p>
+
+    <h2>Solution in Math (Explicit Euler)</h2>
+    \[
+    \frac{\partial V}{\partial t} \approx \frac{V_i^{j+1} - V_i^j}{\Delta t},\quad
+    \frac{\partial^2 V}{\partial S^2} \approx \frac{V_{i+1}^j - 2V_i^j + V_{i-1}^j}{(\Delta S)^2}
+    \]
+
+    <h2>Extrapolation (C++ Implementation)</h2>
+    <ul>
+      <li>Grid stored in <code>std::vector&lt;double&gt;</code> (current time slice)</li>
+      <li>Stability: \(\Delta t / (\Delta S)^2 < 1/2\). Otherwise, switch to Implicit Method solving a tridiagonal system</li>
+    </ul>
+  </section>
+</article>
+</body>
+</html>
+

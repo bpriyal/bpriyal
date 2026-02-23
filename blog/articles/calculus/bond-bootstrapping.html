@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Constructing the Yield Curve</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<article>
+  <h1>Constructing the Yield Curve</h1>
+  <p class="subtitle">#3 Where Zeros meet Coupons — Modeling the Term Structure</p>
+
+  <section>
+    <h2>Source & Code Reference</h2>
+    <p>Primer Ch. 2.7 (Bond Math), Ch. 8.7 (Bootstrapping)<br>
+    C++ Implementation: <a href="../../assets/code/yield_curve_bootstrap.cpp">yield_curve_bootstrap.cpp</a></p>
+
+    <h2>Model the Problem</h2>
+    <p>
+      Given market prices of coupon-bearing bonds \(P_{mkt}\), compute zero rates \(r(0,t)\):
+      \[
+      P_{\text{model}} = \sum_{i=1}^{n} c_i e^{-r(0,t_i) t_i}
+      \]
+    </p>
+
+    <h2>Explain the Modelled Events</h2>
+    <p>Bonds are bundles of cash flows at discrete maturities. Bootstrapping recursively solves for the unknown zero rate at each maturity.</p>
+
+    <h2>Extrapolation (C++ Implementation)</h2>
+    <ul>
+      <li>Store zero rates in <code>std::map&lt;double,double&gt;</code> or <code>std::vector&lt;pair&gt;</code></li>
+      <li>Loop over sorted bonds and use a root solver (Secant or Newton) to zero out price difference</li>
+    </ul>
+  </section>
+</article>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Drunk Passenger</title>
+  <meta name="description" content="A boarding puzzle where recursion collapses into symmetry." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/article.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<article>
+
+<h1>The Drunk Passenger</h1>
+<div class="subtitle">Where recursion hides behind intuition</div>
+
+<p>
+One hundred passengers board a plane with exactly one hundred seats.
+The first passenger is drunk and chooses a seat uniformly at random.
+Every subsequent passenger takes their own seat if available; otherwise,
+they choose randomly from the remaining seats.
+</p>
+
+<p>
+What is the probability that the <em>last passenger</em> sits in their assigned seat?
+</p>
+
+<h2>Modeling the Problem</h2>
+
+<p>
+Despite the long boarding process, only two seats matter:
+Seat 1 and Seat 100.
+The uncertainty resolves the moment one of these seats is taken by a displaced passenger.
+</p>
+
+<h2>The Key Insight</h2>
+
+<p>
+Whenever a passenger must choose randomly, Seat 1 and Seat 100 are symmetric options.
+No rule biases one over the other.
+</p>
+
+<p>
+Eventually, one of them is chosen first.
+</p>
+
+<h2>Result</h2>
+
+<div class="math">
+$$
+P(\text{last passenger sits correctly}) = \frac{1}{2}
+$$
+</div>
+
+<footer>
+Probability Puzzles Series · Boarding Processes
+</footer>
+
+</article>
+</body>
+</html>
+

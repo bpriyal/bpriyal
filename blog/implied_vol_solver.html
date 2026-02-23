@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Search for Sigma: Inverse Black-Scholes</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<article>
+  <h1>The Search for Sigma: Inverse Black-Scholes</h1>
+  <p class="subtitle">#2 Where Markets Defy Constants — Modeling The Volatility Smile</p>
+
+  <section>
+    <h2>Source & Code Reference</h2>
+    <p>Primer Ch. 8.6 (Implied Volatility), Ch. 8.2 (Newton's Method)<br>
+    C++ Implementation: <a href="../../assets/code/implied_vol_solver.cpp">implied_vol_solver.cpp</a></p>
+
+    <h2>Model the Problem</h2>
+    <p>
+      Given market price \(C_{mkt}\) of an option, find volatility \(\sigma\) in Black-Scholes:
+      \[
+      f(\sigma) = C_{BS}(S,K,T,r,\sigma) - C_{mkt} = 0
+      \]
+    </p>
+
+    <h2>Explain the Modelled Events</h2>
+    <p>Volatility is the only unobservable parameter. Since \(C_{BS}\) is strictly increasing with \(\sigma\) (Vega > 0), a unique root exists.</p>
+
+    <h2>Solution in Math (Newton-Raphson)</h2>
+    \[
+    \sigma_{n+1} = \sigma_n - \frac{f(\sigma_n)}{f'(\sigma_n)} = \sigma_n - \frac{C_{BS}(\sigma_n)-C_{mkt}}{\text{Vega}(\sigma_n)}
+    \]
+
+    <h2>Extrapolation (C++ Implementation)</h2>
+    <ul>
+      <li>Initial guess: 0.5 or Brenner-Subrahmanyam approximation 
+      \(\sigma \approx \sqrt{\frac{2\pi}{T}} \frac{C}{S}\)
+      </li>
+      <li>Switch to Bisection Method if Vega is small (deep OTM options), implemented in <code>bisection.cpp</code></li>
+    </ul>
+  </section>
+</article>
+</body>
+</html>
+

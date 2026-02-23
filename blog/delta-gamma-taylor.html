@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delta and Gamma: The Geometry of Risk</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<article>
+  <h1>Delta and Gamma: The Geometry of Risk</h1>
+  <p class="subtitle">#1 Where Calculus Meets Hedging — Modeling Sensitivity with Derivatives</p>
+
+  <section>
+    <h2>Source & Code Reference</h2>
+    <p>Primer Ch. 3.6 (Greeks), Ch. 5 (Taylor Series)<br>
+    C++ Implementation: <a href="../../assets/code/greeks.cpp">greeks.cpp</a></p>
+
+    <h2>Model the Problem</h2>
+    <p>
+      We model the change in a call option's price \(C(S,t)\) relative to small movements in the underlying asset \(S\). 
+      Delta (\(\Delta\)) is the first derivative:
+      \[
+      \Delta = \frac{\partial C}{\partial S}
+      \]
+      and Gamma (\(\Gamma\)) is the second derivative:
+      \[
+      \Gamma = \frac{\partial^2 C}{\partial S^2}.
+      \]
+    </p>
+
+    <h2>Explain the Modelled Events</h2>
+    <ul>
+      <li><strong>Delta (Δ):</strong> Slope of the price curve. Δ=0.5 → $1 increase in stock price increases option value by $0.50.</li>
+      <li><strong>Gamma (Γ):</strong> Curvature of the price curve. High gamma implies rapid changes in Δ, making hedging difficult.</li>
+    </ul>
+
+    <h2>Solution in Math</h2>
+    <p>Black-Scholes formula:</p>
+    \[
+    C = S N(d_1) - K e^{-rT} N(d_2)
+    \]
+    <ul>
+      <li>Delta: \( \Delta = N(d_1) \)</li>
+      <li>Gamma: \( \Gamma = \frac{N'(d_1)}{S\sigma\sqrt{T}} \), where \(N'(x)\) is the standard normal PDF</li>
+      <li>Taylor Approximation: 
+      \[
+      dC \approx \Delta\, dS + \frac{1}{2} \Gamma (dS)^2
+      \]
+      </li>
+    </ul>
+
+    <h2>Extrapolation (C++ Implementation)</h2>
+    <ul>
+      <li>Struct <code>Greeks</code> returns <code>std::tuple&lt;Delta, Gamma&gt;</code></li>
+      <li>Compute <code>d1</code> and <code>N'(d1)</code> once for multiple Greeks</li>
+      <li>Finite Difference Verification:
+      \[
+      \Gamma \approx \frac{C(S+h) - 2C(S) + C(S-h)}{h^2}
+      \]
+      </li>
+    </ul>
+  </section>
+</article>
+</body>
+</html>
+

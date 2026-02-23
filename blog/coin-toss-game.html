@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Coin Toss Game</title>
+  <meta name="description" content="A probability puzzle where symmetry collapses complexity." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/article.js"></script>
+</head>
+
+<body>
+<article>
+
+<h1>The Coin Toss Game</h1>
+<div class="subtitle">
+Where symmetry simplifies complexity
+</div>
+
+<p>
+Two players flip coins. Player A flips <em>n + 1</em> fair coins, while Player B flips <em>n</em>.
+The winner is whoever gets more heads.  
+At first glance, Player A seems advantaged — one extra coin should matter.
+Surprisingly, it doesn’t.
+</p>
+
+<h2>Modeling the Problem</h2>
+
+<p>
+Instead of brute-forcing combinations, we decompose Player A’s coins into two parts:
+the first <em>n</em> coins and the final extra coin.
+We compare only the first <em>n</em> coins against Player B.
+</p>
+
+<p>
+After those <em>n</em> tosses, there are only three possible states:
+</p>
+
+<ul>
+  <li>A is ahead</li>
+  <li>B is ahead</li>
+  <li>The game is tied</li>
+</ul>
+
+<p>
+Because both players flipped identical numbers of fair coins, the “ahead” states
+are symmetric.
+</p>
+
+<h2>The Key Insight</h2>
+
+<p>
+If Player A is already ahead, the extra coin doesn’t matter.
+If Player A is behind, the extra coin can’t help.
+Only when the game is tied does the extra coin decide the outcome.
+</p>
+
+<div class="math">
+P(A wins) = P(ahead) + 0.5 · P(tie)
+</div>
+
+<p>
+Symmetry forces these probabilities to collapse neatly:
+</p>
+
+<div class="math">
+P(A wins) = 1/2
+</div>
+
+<p>
+Despite flipping an extra coin, Player A has <strong>no advantage</strong>.
+</p>
+
+<h2>Why This Matters</h2>
+
+<p>
+This puzzle appears frequently in quantitative interviews because it tests
+whether you search for structure before computation.
+The correct solution avoids enumeration entirely.
+</p>
+
+<p>
+If the coins were biased, the symmetry would break — and the result would change.
+That extension is where simulation becomes useful.
+</p>
+
+<footer>
+Part of the Probability Puzzles series · Inspired by Zhou’s Green Book
+</footer>
+
+</article>
+</body>
+</html>
+

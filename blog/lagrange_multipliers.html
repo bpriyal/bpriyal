@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Optimizing Under Constraints</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<article>
+  <h1>Optimizing Under Constraints</h1>
+  <p class="subtitle">#5 Where Geometry meets Optimization — Modeling Portfolio Allocation</p>
+
+  <section>
+    <h2>Source & Code Reference</h2>
+    <p>Primer Ch. 8.1 (Lagrange Multipliers)<br>
+    C++ Implementation: <a href="../../assets/code/lagrange_optimizer.cpp">lagrange_optimizer.cpp</a></p>
+
+    <h2>Model the Problem</h2>
+    <p>
+      Maximize function \(f(x,y)\) subject to constraint \(g(x,y)=c\). Define Lagrangian:
+      \[
+      L(x,y,\lambda) = f(x,y) - \lambda (g(x,y)-c)
+      \]
+    </p>
+
+    <h2>Solution in Math</h2>
+    <p>Solve system:</p>
+    \[
+    \frac{\partial L}{\partial x} = 0,\quad 
+    \frac{\partial L}{\partial y} = 0,\quad 
+    \frac{\partial L}{\partial \lambda} = 0
+    \]
+
+    <h2>Extrapolation (C++ Implementation)</h2>
+    <ul>
+      <li>Solve linear system \(Ax=b\) using covariance matrix and constraint vectors</li>
+      <li>C++ code uses <code>include/linear_algebra.hpp</code> to handle matrix computations</li>
+    </ul>
+  </section>
+</article>
+</body>
+</html>
+

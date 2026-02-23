@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Hopping Rabbit</title>
+  <meta name="description" content="A recursive probability puzzle with Fibonacci structure." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/article.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<article>
+
+<h1>The Hopping Rabbit</h1>
+<div class="subtitle">Where recursion becomes structure</div>
+
+<p>
+A rabbit climbs a staircase with \(n\) steps.
+It may hop either 1 or 2 steps at a time.
+</p>
+
+<h2>Modeling the Problem</h2>
+
+<p>
+To reach step \(n\), the rabbit must come from:
+</p>
+
+<ul>
+  <li>step \(n-1\)</li>
+  <li>step \(n-2\)</li>
+</ul>
+
+<h2>Result</h2>
+
+<div class="math">
+$$
+f(n) = f(n-1) + f(n-2)
+$$
+</div>
+
+<footer>
+Probability Puzzles Series · Dynamic Programming
+</footer>
+
+</article>
+</body>
+</html>
+

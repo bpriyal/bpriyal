@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer System Architecture & JVM Blog Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #16a085;
+            margin-top: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #2980b9;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .date {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Computer System Architecture & JVM Blog Series</h1>
+
+    <!-- System & Computer Architecture Topics -->
+    <h2>System & Computer Architecture Topics</h2>
+
+    <h3><a href="cpu-architecture.html">CPU Architecture & Instruction Execution</a> <span class="date">(Jan 15, 2023)</span></h3>
+    <ul>
+        <li>How CPU executes instructions (fetch-decode-execute cycle)</li>
+        <li>Pipelining, superscalar execution</li>
+        <li>Registers, ALU, cache hierarchy (L1, L2, L3)</li>
+        <li>Branch prediction, speculation, out-of-order execution</li>
+    </ul>
+
+    <h3><a href="memory-hierarchy.html">Memory Hierarchy & Management</a> <span class="date">(Feb 5, 2023)</span></h3>
+    <ul>
+        <li>RAM, virtual memory, paging, segmentation</li>
+        <li>Cache memory: locality (temporal/spatial), cache misses</li>
+        <li>Memory bottlenecks in modern CPU design</li>
+        <li>NUMA (Non-uniform memory access) architecture</li>
+    </ul>
+
+    <h3><a href="os-internals.html">OS Internals & Process Management</a> <span class="date">(Mar 20, 2023)</span></h3>
+    <ul>
+        <li>Process vs Thread vs Task</li>
+        <li>Context switching, process scheduling, CPU time slices</li>
+        <li>System calls, kernel vs user space</li>
+        <li>Synchronization primitives (mutex, semaphore, spinlock)</li>
+    </ul>
+
+    <h3><a href="file-systems.html">File Systems & Storage</a> <span class="date">(Apr 10, 2023)</span></h3>
+    <ul>
+        <li>File systems: ext4, NTFS, XFS, Btrfs</li>
+        <li>Block storage vs object storage</li>
+        <li>Journaling, I/O buffering, caching strategies</li>
+    </ul>
+
+    <!-- JVM & Java-Specific Topics -->
+    <h2>JVM & Java-Specific Topics</h2>
+
+    <h3><a href="jvm-architecture.html">JVM Architecture & Execution Model</a> <span class="date">(May 5, 2023)</span></h3>
+    <ul>
+        <li>Class loader, bytecode verifier, runtime data areas</li>
+        <li>Method Area, Heap, Stack, Program Counter</li>
+        <li>Execution engine: interpreter vs JIT compilation</li>
+        <li>JVM internal optimizations</li>
+    </ul>
+
+    <h3><a href="java-memory.html">Java Memory Management</a> <span class="date">(Jun 12, 2023)</span></h3>
+    <ul>
+        <li>Heap vs Stack</li>
+        <li>Young generation, old generation, permanent/metaspace</li>
+        <li>Object lifecycle, strong/weak/soft/phantom references</li>
+        <li>Escape analysis and scalar replacement</li>
+    </ul>
+
+    <h3><a href="garbage-collection.html">Garbage Collection in Java</a> <span class="date">(Jul 8, 2023)</span></h3>
+    <ul>
+        <li>How GC works (Mark & Sweep, Generational GC)</li>
+        <li>Serial, Parallel, CMS, G1, ZGC, Shenandoah</li>
+        <li>Stop-the-world pauses, concurrent GC</li>
+        <li>Tuning GC for low latency vs throughput</li>
+    </ul>
+
+    <h3><a href="java-performance.html">Java Performance & Profiling</a> <span class="date">(Aug 18, 2023)</span></h3>
+    <ul>
+        <li>Threading & synchronization impact on memory</li>
+        <li>Profiling tools (JVisualVM, JConsole, Flight Recorder)</li>
+        <li>Memory leaks & diagnosis</li>
+        <li>Optimizing memory usage & GC pauses</li>
+    </ul>
+
+    <!-- Infrastructure & Containerization Topics -->
+    <h2>Infrastructure & Containerization Topics</h2>
+
+    <h3><a href="docker-fundamentals.html">Docker Fundamentals</a> <span class="date">(Sep 10, 2023)</span></h3>
+    <ul>
+        <li>Container vs VM</li>
+        <li>Image layering, Dockerfile best practices</li>
+        <li>Networking, volumes, and persistent storage</li>
+        <li>Docker Compose for multi-container apps</li>
+    </ul>
+
+    <h3><a href="kubernetes-architecture.html">Kubernetes Architecture</a> <span class="date">(Oct 25, 2023)</span></h3>
+    <ul>
+        <li>Master & Worker nodes, API server, controller manager</li>
+        <li>Pods, ReplicaSets, Deployments, Services</li>
+        <li>ConfigMaps, Secrets, Namespaces</li>
+        <li>Scheduling, rolling updates, self-healing</li>
+    </ul>
+
+    <h3><a href="container-network-storage.html">Container Networking & Storage</a> <span class="date">(Nov 15, 2023)</span></h3>
+    <ul>
+        <li>CNI plugins, ingress controllers, service mesh</li>
+        <li>PersistentVolume vs PersistentVolumeClaim</li>
+        <li>StatefulSets vs Deployments</li>
+    </ul>
+
+    <h3><a href="cloud-scaling.html">Cloud & Infrastructure Scaling</a> <span class="date">(Dec 20, 2023)</span></h3>
+    <ul>
+        <li>Load balancing, horizontal vs vertical scaling</li>
+        <li>Autoscaling: HPA, VPA</li>
+        <li>Infrastructure as code (Terraform/Ansible basics)</li>
+        <li>Observability: logging, monitoring, metrics, tracing</li>
+    </ul>
+
+    <!-- Advanced Topics / Hybrid -->
+    <h2>Advanced Topics / Hybrid</h2>
+
+    <h3><a href="distributed-systems.html">Distributed Systems Fundamentals</a> <span class="date">(Jan 10, 2024)</span></h3>
+    <ul>
+        <li>CAP theorem, consistency models, quorum</li>
+        <li>Leader election, consensus algorithms (Raft, Paxos)</li>
+        <li>Event-driven architectures, message brokers (Kafka/RabbitMQ)</li>
+    </ul>
+
+    <h3><a href="jvm-tuning.html">High-Performance JVM & System Tuning</a> <span class="date">(Feb 28, 2024)</span></h3>
+    <ul>
+        <li>JVM flags for GC tuning, heap sizing</li>
+        <li>Thread pool tuning, CPU affinity</li>
+        <li>Performance bottleneck analysis (latency vs throughput)</li>
+        <li>Profiling multi-node JVM applications</li>
+    </ul>
+
+    <h3><a href="container-security.html">Security & Isolation in Containers</a> <span class="date">(Mar 15, 2024)</span></h3>
+    <ul>
+        <li>Namespaces & cgroups</li>
+        <li>Container escape, kernel hardening</li>
+        <li>Pod security policies, RBAC</li>
+    </ul>
+
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Poker Hands</title>
+  <meta name="description" content="Combinatorics behind poker hand probabilities." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/article.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<article>
+
+<h1>Poker Hands</h1>
+<div class="subtitle">Where counting is everything</div>
+
+<p>
+A five-card hand is drawn from a standard 52-card deck.
+Each hand is a combination, not a sequence.
+</p>
+
+<h2>Modeling the Problem</h2>
+
+<p>
+The total number of possible hands is:
+</p>
+
+<div class="math">
+$$
+\binom{52}{5}
+$$
+</div>
+
+<h2>Examples</h2>
+
+<p><strong>Four of a Kind</strong></p>
+
+<div class="math">
+$$
+13 \times 48 = 624
+$$
+</div>
+
+<p><strong>Full House</strong></p>
+
+<div class="math">
+$$
+13 \times \binom{4}{3} \times 12 \times \binom{4}{2} = 3744
+$$
+</div>
+
+<footer>
+Probability Puzzles Series · Combinatorics
+</footer>
+
+</article>
+</body>
+</html>
+

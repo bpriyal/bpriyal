@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>N Points on a Circle</title>
+  <meta name="description" content="A geometric probability puzzle on semicircle clustering." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/article.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<article>
+
+<h1>N Points on a Circle</h1>
+<div class="subtitle">Where geometry defines probability</div>
+
+<p>
+Place \(N\) points independently and uniformly on the circumference of a circle.
+What is the probability that all points lie within a single semicircle?
+</p>
+
+<h2>Modeling the Problem</h2>
+
+<p>
+Fix one point and treat it as the start of a semicircle.
+For all points to lie within that semicircle,
+the remaining \(N-1\) points must fall within half the circle.
+</p>
+
+<h2>The Key Insight</h2>
+
+<p>
+Each point has an equal chance of being the leftmost boundary.
+These events are mutually exclusive.
+</p>
+
+<h2>Result</h2>
+
+<div class="math">
+$$
+P = N \cdot \left(\frac{1}{2}\right)^{N-1}
+$$
+</div>
+
+<footer>
+Probability Puzzles Series · Geometric Probability
+</footer>
+
+</article>
+</body>
+</html>
+
