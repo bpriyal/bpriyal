@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyal's Quantitative & Semiotic Blog</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .tile {
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: #0969da;
+        }
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(149,157,165,0.2);
+            background-color: #f3f4f6;
+        }
+        .tile h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #1f2328;
+        }
+        .tile p {
+            color: #656d76;
+            font-size: 0.9rem;
+        }
+        .semiotics { border-top: 4px solid #bf3989; }
+        .calculus { border-top: 4px solid #0969da; }
+        .probability { border-top: 4px solid #1a7f37; }
+        .finance { border-top: 4px solid #cf222e; }
+        .systems { border-top: 4px solid #8250df; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Knowledge Repository</h1>
+    <p>A collection of notes on Mathematics, Quant Finance, and Linguistics</p>
+</header>
+
+<div class="grid-container">
+    <a href="calculus/index-calculus.html" class="tile calculus">
+        <h2>Calculus</h2>
+        <p>Delta-Gamma approximations, Taylor Series, and Finite Difference methods.</p>
+    </a>
+
+    <a href="probability/index_probability_articles.html" class="tile probability">
+        <h2>Probability</h2>
+        <p>Stochastic puzzles, Poker hands, and Martingale processes.</p>
+    </a>
+
+    <a href="calculus/implied_vol_solver.html" class="tile finance">
+        <h2>Finance</h2>
+        <p>Black-Scholes, Implied Volatility solvers, and Bond Bootstrapping.</p>
+    </a>
+
+    <a href="system-design/index-system-design.html" class="tile systems">
+        <h2>System Design</h2>
+        <p>Architectural patterns and large-scale distributed systems.</p>
+    </a>
+
+    <a href="semiotics/index.html" class="tile semiotics">
+        <h2>Semiotics</h2>
+        <p>The study of signs, symbols, and meaning-making in language.</p>
+    </a>
+
+    <a href="game-theory/info.txt" class="tile">
+        <h2>Game Theory</h2>
+        <p>Non-cooperative games and Lead-Follow decision models.</p>
+    </a>
+</div>
+
+</body>
+</html>
