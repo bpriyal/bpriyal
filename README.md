@@ -3,6 +3,7 @@ Checkout my articles from study notes on system design, quant algos, financial s
 <div align="center">
 <img src="src/files/work_display_tiles.svg" width="100%" alt="My Published Articles">
 </div>
+
 ### Projects Index
 
 #### [QAE for Financial Risk: VaR & CVaR Estimation](REPLACE_WITH_GITHUB_LINK_QAE)
