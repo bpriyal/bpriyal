@@ -4,6 +4,7 @@ Checkout my articles from study notes on system design, quant algos, financial s
 <img src="src/files/work_display_tiles.svg" width="100%" alt="My Published Articles">
 </div>
 ### Projects Index
+
 #### [QAE for Financial Risk: VaR & CVaR Estimation](REPLACE_WITH_GITHUB_LINK_QAE)
 #### [Black–Scholes via fBM & Spectral Analysis](REPLACE_WITH_GITHUB_LINK_FBM)
 #### [Algorithmic Strategy Backtesting](REPLACE_WITH_GITHUB_LINK_BACKTESTING)
