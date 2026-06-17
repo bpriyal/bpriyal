@@ -7,9 +7,7 @@ Checkout my articles from study notes on system design, quant algos, financial s
 ### AWARDS, MERITS, RANKS
 
 * **India Rank 1, International Math Olympiad** – Score 111.25/120 Hard 40/40 – Kangaroo Open PRO 2026
-* **Top Architect Recognition** – Flipkart 2024
-* **Mentor - Flipkart FCC Camp** for Other Engineering Students primed in Computer Science Industrial Fundamentals 2024
-* **Town-hall project recognition** by XVA MD, Morgan Stanley 2023
+* **Professional Experience** – Flipkart Internet Ecom Buying Side Product Pages SDE2, Morgan Stanley XVA/CVA Senior Assc. Dev
 * **Best Research Poster** – Computational Social Choice - ACM Summer School IIT Gandhinagar 2019
 * **AIR 15 - R2 & 99.89%ile - R1**, National Aptitude Olympiad R2 (NCAT) 2019
 * **CBSE National Board Problem Solving Assessment** 96.67%ile 2015
