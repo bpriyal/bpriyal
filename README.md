@@ -4,6 +4,8 @@ Checkout my articles from study notes on system design, quant algos, financial s
 <img src="src/files/work_display_tiles.svg" width="100%" alt="My Published Articles">
 </div>
 
+2026 Admit to University of Chicago, University of California Davis - No attendance due to no student visa appointments.
+
 ### AWARDS, MERITS, RANKS
 
 * **India Rank 1, International Math Olympiad** – Score 111.25/120 Hard 40/40 – Kangaroo Open PRO 2026
